@@ -1,0 +1,151 @@
+{
+    "home": {
+        "description1": "It provides a minimal setup for creating a react application.",
+        "description2": "Also includes common components styled with Emotion.",
+        "start": "Get Started"
+    },
+    "guide": {
+        "installation-description": "To start a project based on RE Starter, run the following command in terminal.",
+        "stack-share-description": "- Base: React, TypeScript\n- Styling: Emotion\n- State Management: Recoil, Tanstack-Query\n- Build Tool: Vite\n",
+        "features-description": "- Provides common components.\n- Provides dark mode/light mode.\n- Supports responsive design.\n- Supports multiple languages.",
+        "roadmap-description": "Storybook will be applied to make it easier to check common components.\nA Next.js-based boilerplate for SSR will be developed separately.\nMore common components will be added. (ex. Accordion, Toast)\nCommon components will be separated into separate libraries."
+    },
+    "color-palette": {
+        "description": "You can select and use the basic color, or add your desired color.",
+        "default-color-description": "The following colors are built into the template.",
+        "customization-description": "You can also add your own desired color.",
+        "customization-guide1": "Declare it as a global variable through css variable within globlStyle of the global.ts.\nGlobalStyle is a style that is applied throughout the application through Global in @emotion/react.",
+        "customization-guide2": "To use declared variables in various components, match them to Colors in the token.ts.",
+        "customization-guide3": "The Colors token can be used in the background, border, and color properties of common components."
+    },
+    "dark-mode": {
+        "description": "RE Starter offers two color experiences: light mode and dark mode.",
+        "default-mode-description": "Default mode is selected based on the user's OS settings. If no settings are found, dark mode is applied\nIf your settings change while the website is open, the website will change its color mode to reflect this.",
+        "toggling-mode-description": "You can use the useTheme to check the current mode, or toggle to another mode.\nBecause theme is not a global variable, changes in other components are not reflected.\nTherefore, it should only be used to display a single toggle button.",
+        "usage-description": "The colors of each mode are provided through CSS variables.",
+        "usage-guide1": "Define variables to be applied in each mode in globalStyle of the global.ts.",
+        "usage-guide2": "GlobalStyle is a style that is applied throughout the application through Global in @emotion/react.",
+        "usage-guide3": "To use declared variables in various components, match them to Colors in the token.ts",
+        "usage-guide4": "When using colors declared in the Colors token in a component, the color adapts to the current color mode."
+    },
+    "design-token": {
+        "description": "You can easily and conveniently change css properties using predefined tokens in the token.ts.",
+        "font-token-description": "Tokens used for font-size and font-weight, normal and 400 are applied as default values.",
+        "size-token-description": "Tokens used for width, min-width, max-width, height, min-height, and max-height.",
+        "color-token-description": "Token used for background-color, border-color, and color. Text-color is applied as the default font color."
+    },
+    "button": {
+        "description": "Button component is used to trigger an action or event",
+        "import-code": "import { Button } from '@components/shared';",
+        "usage-code": "<Button color='primary'>Button</Button>",
+        "props-description": "Button component contains all the properties of the <button /> and the following props are applied."
+    },
+    "input": {
+        "description": "Input component is used to allow users to enter and edit text.",
+        "import-code": "import { Input } from '@components/shared';",
+        "usage-code": "<Input placeholder='Enter the text please.' />",
+        "props-description": "Input component contains all the properties of the <input /> and the following props are applied."
+    },
+    "select": {
+        "description": "Select component is used along with Option component to allow the user to select one option from multiple options.",
+        "import-code": "import { Select, Option } from '@components/shared';",
+        "usage-code": "<Select name={NAMES[selected]} maxHeight={180}>\n\t<Option selected={NAMES[selected]} values={NAMES} onSelect={selectName} />\n</Select>",
+        "props-description": "The following props are applied to Select component and Option component."
+    },
+    "textarea": {
+        "description": "Textarea component is used to allow users to enter and edit multiple lines of text.",
+        "import-code": "import { Textarea } from '@components/shared';",
+        "usage-code": "<Textarea minWidth='full' radius={4} rows={3} />",
+        "props-description": "Textarea component contains all the properties of the <textarea /> and the following props are applied."
+    },
+    "text-field": {
+        "description": "TextField component is used to allow users to enter and edit text.",
+        "import-code": "import { TextField } from '@components/shared';",
+        "usage-code": "<TextField minWidth='full' radius={4} rows={3} />",
+        "props-description": "Textfield component contains all the properties of the <input /> and the following props are applied."
+    },
+    "box": {
+        "description": "Box component is used to create layout elements.",
+        "import-code": "import { Box } from '@components/shared';",
+        "usage-code": "<Box as='div' background='green' width='full' height='full' />",
+        "props-description": "Box contains all the properties of value of the same element as the value of as.\nAnd the following props are applied."
+    },
+    "flex": {
+        "description": "Felx component is used to arrange items horizontally or vertically.",
+        "import-code": "import { Flex } from '@components/shared';",
+        "usage-code": "<Flex gap={20}>\n\t<Text>Item1</Text>\n\t<Text>Item2</Text>\n\t<Text>Item3</Text>\n</Flex>",
+        "props-description": "Flex component contains all the properties of the <div/> and the following props are applied."
+    },
+    "grid": {
+        "description": "Grid component is used to arrange items in a grid-pattern.",
+        "import-code": "import { Grid } from '@components/shared';",
+        "usage-code": "<Grid columns='repeat(2, 200px)' rows='repeat(2, 200px)'>\n\t<Text>Item1</Text>\n\t<Text>Item2</Text>\n\t<Text>Item3</Text>\n\t<Text>Item4</Text>\n</Grid>",
+        "props-description": "Grid component contains all the properties of the <div/> and the following props are applied."
+    },
+    "modal": {
+        "description": "Modal component is used to show an independent layout in a pop-up manner.",
+        "import-code": "import { Modal } from '@components/modal';",
+        "usage-code": "const { openModal, closeModal, showModal } = useModal();\n<Button onClick={()=>openModal('example-modal')}>Modal 열기</Button>\n{ showModal('example-modal') && <ExampleModal onClose={() => closeModal('example-modal')} /> }\n\n// ExampleModal internal implementation\n<Modal\n\tbackground='white'\n\tmodalId='example-modal'\n\tonClose={onClose}\n\tradius={8}\n>\n\t<Text>Example Modal</Text>\n</Modal>",
+        "props-description": "Modal component contains all the properties of the <Flex/> and the following props are applied."
+    },
+    "slide-modal": {
+        "description": "SlideModal component is used to show an independent layout in a slide format.",
+        "import-code": "import { SlideModal } from '@components/modal';",
+        "usage-code": "const { openModal, closeModal, showModal } = useModal();\n<Button onClick={()=>openModal('example2-modal')}>Modal 열기</Button>\n{ showModal('example2-modal') && <Example2Modal onClose={() => closeModal('example2-modal')} /> }\n\n// Example2Modal internal implementation\n<SlideModal\n\tbackground='background'\n\tdistance={300}\n\tmodalId='example2-modal'\n\tonClose={onClose}\n\tposition='right'\n\twidth={300}\n>\n\t<Text>Example2 Modal</Text>\n</SlideModal>",
+        "props-description": "SlideModal component contains all the properties fo the <Flex/> and the following props are applied."
+    },
+    "image": {
+        "description": "Image component is used to display image file.",
+        "import-code": "import { Image } from '@components/shared';",
+        "usage-code": "<Image src='/src/assets/icons/vite.svg' alt='vite logo' />",
+        "props-description": "Image component contains all the properties of the <img/> and the following props are applied."
+    },
+    "icon": {
+        "description": "Icon component is used to display icons in svg format.",
+        "import-code": "import { Icon } from '@components/shared';",
+        "usage-code": "<Icon name='menu' size={16} color='icon-color' />",
+        "props-description": "The following props are applied to the Icon component."
+    },
+    "svg": {
+        "description": "Svg component is used to manage svg images in code format rather than files.",
+        "import-code": "import { Svg } from '@components/shared';",
+        "usage-code": "<Svg width={16} height={16}>\n\t<path\n\t   clipRule='evenodd'\n\t   d='M5.53 4.47a.75.75 0 00-1.06 1.06L10.94 12l-6.47 6.47a.75.75 0 101.06 1.06L12 13.06l6.47 6.47a.75.75 0 101.06-1.06L13.06 12l6.47-6.47a.75.75 0 00-1.06-1.06L12 10.94 5.53 4.47z'\n\t   fillRule='evenodd'\n\t/>\n</Svg>",
+        "props-description": "Svg component contains all the properties of the <svg/> and the following props are applied."
+    },
+    "link": {
+        "description": "Link component is used to navigate to external sites.",
+        "import-code": "import { Link } from '@components/shared';",
+        "usage-code": "<Link href='https://github.com/one-chance'>Github</Link>",
+        "props-description": "Link component contains all the properties of the <a/> and the following props are applied."
+    },
+    "navlink": {
+        "description": "NavLink component is used to navigate to different pages with a site.",
+        "import-code": "import { NavLink } from '@components/shared';",
+        "usage-code": "<NavLink to='/'>홈으로</NavLink>",
+        "props-description": "NavLink component contains all the properties of the 'Link' in react-router-dom.\nAnd the following props are applied."
+    },
+    "pagination": {
+        "description": "Pagination component is used to move pages int the list.",
+        "import-code": "import { Pagination } from '@components/shared';",
+        "usage-code": "const location = useLocation();\nconst navigate = useNavigate();\nconst [currentPage, setCurrentPage] = useState(1);\n\nuseEffect(() => {\n\tif (component !== 'pagination') return;\n\tconst queryParams = new URLSearchParams(location.search);\n\tconst page = parseInt(queryParams.get('page') || '1', 10);\n\n\tif (isNaN(page) || page <= 0) {\n\t  queryParams.set('page', '1');\n\t  navigate(`?${queryParams.toString()}`);\n\t} else {\n\t  setCurrentPage(page);\n\t}\n}, [location, navigate]);\n\nreturn <Pagination currentPage={currentPage} totalPage={10}>;",
+        "props-description": "The following props are applied to the Pagination component."
+    },
+    "text": {
+        "description": "Text component is used to display text.",
+        "import-code": "import { Text } from '@components/shared';",
+        "usage-code": "<Text color='text-color' size='large' weight='bold'>Text</Text>",
+        "props-description": "Text component contains all the properties of the <span/> and the following props are applied."
+    },
+    "label": {
+        "description": "Label component is used to name form elements.",
+        "import-code": "import { Label } from '@components/shared';",
+        "usage-code": "<Label color='text-color' htmlFor='search'>Label</Label>",
+        "props-description": "Label component contains all the properties of the <label/> and the following props are applied."
+    },
+    "heading": {
+        "description": "Heading component is used to display titles that deserve emphasis.",
+        "import-code": "import { Heading } from '@components/shared';",
+        "usage-code": "<Heading as='h2' color='text-color'>Title</Heading>",
+        "props-description": "Heading component contains all the properties of the <h1/> and the following props are applied."
+    }
+}
