@@ -57,11 +57,7 @@ export default function Header() {
       height={60}
       padding="0 20px"
     >
-      <Flex
-        // css={{ marginLeft: 'calc(100vh - 1080px)' }}
-        height="full"
-        justifyContent="between"
-      >
+      <Flex height="full" justifyContent="between">
         <Flex alignItems="center" gap={8}>
           {pathname.includes('docs') && (
             <Button onClick={() => openModal('sidebar-modal')}>

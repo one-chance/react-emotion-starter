@@ -69,7 +69,7 @@ export default function ColorPalette({ isMobile }: DocumentProps) {
                 width={48}
               />
               <Flex direction="column">
-                <Text size={isMobile ? 'small' : 'normal'}>Black</Text>
+                <Text size={isMobile ? 'small' : 'normal'}>{color.name}</Text>
                 <Text size={isMobile ? 'xSmall' : 'small'}>{color.hex}</Text>
               </Flex>
             </Flex>

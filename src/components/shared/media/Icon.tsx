@@ -1,6 +1,6 @@
 import { CSSObject } from '@emotion/react';
 
-import * as Icons from '@assets/icons';
+import * as Icons from '@assets/index';
 import { Colors } from '@styles/index';
 
 export type IconProps = {

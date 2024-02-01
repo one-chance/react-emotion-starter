@@ -182,7 +182,7 @@ const Examples = ({ component }: ExamplesProps) => {
   );
 
   const ImageExample = useMemo(
-    () => <Image alt="vite 로고" src="/src/assets/icons/vite.svg" />,
+    () => <Image alt="vite 로고" src="/logo/vite.svg" />,
     [],
   );
 
