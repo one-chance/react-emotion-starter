@@ -1,7 +1,6 @@
 {
     "home": {
-        "description1": "React 애플리케이션을 생성하기 위한 최소한의 설정을 제공합니다.",
-        "description2": "Emotion으로 스타일링된 공통 컴포넌트들이 구축되어 있습니다.",
+        "description": "React 애플리케이션을 생성하기 위한 최소한의 설정을 제공합니다.\nEmotion으로 스타일링된 공통 컴포넌트들이 구축되어 있습니다.",
         "start": "시작하기"
     },
     "guide": {
@@ -97,7 +96,7 @@
     "image": {
         "description": "Image 컴포넌트는 이미지 파일을 보여주는 데 사용됩니다.",
         "import-code": "import { Image } from '@components/shared';",
-        "usage-code": "<Image src='/src/assets/icons/vite.svg' alt='Vite 로고' />",
+        "usage-code": "<Image src='/logo/vite.svg' alt='Vite 로고' />",
         "props-description": "Image 컴포넌트는 <img/>의 기본 속성을 모두 포함하며, 다음 props들이 적용됩니다."
     },
     "icon": {

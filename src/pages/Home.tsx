@@ -32,36 +32,26 @@ export default function Home() {
         maxWidth={800}
       >
         <Flex gap={16} justifyContent="center">
-          <Link href="https://react.dev">
-            <Image
-              alt="React logo"
-              css={logoCSS}
-              src="/src/assets/icons/react.svg"
-            />
+          <Link href="https://react.dev" minWidth={isMobile ? 64 : 96}>
+            <Image alt="React" css={logoCSS} src="/logo/react.svg" />
           </Link>
 
-          <Link href="https://www.typescriptlang.org">
-            <Image
-              alt="TypeScript logo"
-              css={logoCSS}
-              src="/src/assets/icons/typescript.svg"
-            />
+          <Link
+            href="https://www.typescriptlang.org"
+            minWidth={isMobile ? 64 : 96}
+          >
+            <Image alt="TypeScript" css={logoCSS} src="/logo/typescript.svg" />
           </Link>
 
-          <Link href="https://emotion.sh/docs/introduction">
-            <Image
-              alt="Emotion logo"
-              css={logoCSS}
-              src="/src/assets/icons/emotion.svg"
-            />
+          <Link
+            href="https://emotion.sh/docs/introduction"
+            minWidth={isMobile ? 64 : 96}
+          >
+            <Image alt="Emotion" css={logoCSS} src="/logo/emotion.svg" />
           </Link>
 
-          <Link href="https://vitejs.dev">
-            <Image
-              alt="Vite logo"
-              css={logoCSS}
-              src="/src/assets/icons/vite.svg"
-            />
+          <Link href="https://vitejs.dev" minWidth={isMobile ? 64 : 96}>
+            <Image alt="Vite" css={logoCSS} src="/logo/vite.svg" />
           </Link>
         </Flex>
 
@@ -76,13 +66,12 @@ export default function Home() {
 
         <Text
           color="gray"
+          css={{ lineHeight: '1.5', whiteSpace: 'pre-wrap' }}
           padding="0 13px"
           size={isMobile ? 'normal' : 'large'}
           center
         >
-          {t('home.description1')}
-          <br />
-          {t('home.description2')}
+          {t('home.description')}
         </Text>
 
         <Flex alignItems="center" gap={16}>
@@ -103,7 +92,7 @@ export default function Home() {
           <Link
             background="primary"
             color="white"
-            href="https://github.com/one-chance"
+            href="https://github.com/one-chance/react-emotion-starter"
             padding="10px 0"
             radius={8}
             size={isMobile ? 'normal' : 'large'}

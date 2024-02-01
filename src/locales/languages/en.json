@@ -1,7 +1,6 @@
 {
     "home": {
-        "description1": "It provides a minimal setup for creating a react application.",
-        "description2": "Also includes common components styled with Emotion.",
+        "description": "It provides a minimal setup for creating a react application.\nAlso includes common components styled with Emotion.",
         "start": "Get Started"
     },
     "guide": {
@@ -97,7 +96,7 @@
     "image": {
         "description": "Image component is used to display image file.",
         "import-code": "import { Image } from '@components/shared';",
-        "usage-code": "<Image src='/src/assets/icons/vite.svg' alt='vite logo' />",
+        "usage-code": "<Image src='/logo/vite.svg' alt='vite logo' />",
         "props-description": "Image component contains all the properties of the <img/> and the following props are applied."
     },
     "icon": {
