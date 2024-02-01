@@ -2,11 +2,7 @@
 
 This starter provides a minimal setup for creating a react application.
 
-## Demo
-
-![demo](https://github.com/one-chance/react-emotion-starter/assets/36535944/ee4c65f2-f844-48cd-9c27-9dbaa0aa2563)
-
-### [Demo Site](https://dx30rj3h3cqsq.cloudfront.net)
+### 👉 [View Demo](https://dx30rj3h3cqsq.cloudfront.net)
 
 ## Quick Start
 
