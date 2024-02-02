@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
@@ -36,15 +36,14 @@ async function main() {
     console.log('Installing dependencies...');
     execSync('npm install');
 
-    console.log('Removing useless files');
+    console.log('Removing useless files..');
+    await fs.rm('./.git', { recursive: true, force: true });
+    await fs.rm(path.join(projectPath, 'bin'), { recursive: true });
 
-    const gitPath = './.git'; // 현재 작업 디렉토리 내의 .git 디렉토리 경로
-    deleteFolder(gitPath);
-
-    fs.rm(path.join(projectPath, 'bin'), { recursive: true });
     console.log('The installation is done, this is ready to use !');
   } catch (error) {
     console.log(error);
   }
 }
+
 main();
