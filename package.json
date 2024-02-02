@@ -1,6 +1,6 @@
 {
   "name": "react-emotion-starter",
-  "version": "1.0.0",
+  "version": "1.1.7",
   "description": "A starter kit based on React and Emotion to easily create applications.",
   "keywords": [
     "boilerplate",
@@ -16,14 +16,17 @@
     "eslint",
     "prettier"
   ],
-  "private": true,
   "type": "module",
   "author": "one-chance",
+  "bin": {
+    "react-emotion-starter": "./bin/react-emotion-starter.js"
+  },
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

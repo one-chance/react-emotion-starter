@@ -32,11 +32,16 @@ export default function Home() {
         maxWidth={800}
       >
         <Flex gap={16} justifyContent="center">
-          <Link href="https://react.dev" minWidth={isMobile ? 64 : 96}>
+          <Link
+            aria-label="react site"
+            href="https://react.dev"
+            minWidth={isMobile ? 64 : 96}
+          >
             <Image alt="React" css={logoCSS} src="/logo/react.svg" />
           </Link>
 
           <Link
+            aria-label="typescript site"
             href="https://www.typescriptlang.org"
             minWidth={isMobile ? 64 : 96}
           >
@@ -44,13 +49,18 @@ export default function Home() {
           </Link>
 
           <Link
+            aria-label="emotion site"
             href="https://emotion.sh/docs/introduction"
             minWidth={isMobile ? 64 : 96}
           >
             <Image alt="Emotion" css={logoCSS} src="/logo/emotion.svg" />
           </Link>
 
-          <Link href="https://vitejs.dev" minWidth={isMobile ? 64 : 96}>
+          <Link
+            aria-label="vite iste"
+            href="https://vitejs.dev"
+            minWidth={isMobile ? 64 : 96}
+          >
             <Image alt="Vite" css={logoCSS} src="/logo/vite.svg" />
           </Link>
         </Flex>
@@ -90,6 +100,7 @@ export default function Home() {
           </NavLink>
 
           <Link
+            aria-label="github site"
             background="primary"
             color="white"
             href="https://github.com/one-chance/react-emotion-starter"
