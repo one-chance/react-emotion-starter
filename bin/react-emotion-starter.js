@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { promises as fs } from 'fs';
+import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
@@ -21,7 +21,7 @@ try {
       `The file ${projectName} already exist in the current directory, please give it another name.`,
     );
   } else {
-    console.log(error);
+    console.log(err);
   }
   process.exit(1);
 }
@@ -36,14 +36,14 @@ async function main() {
     console.log('Installing dependencies...');
     execSync('npm install');
 
-    console.log('Removing useless files..');
-    await fs.rm('./.git', { recursive: true, force: true });
-    await fs.rm(path.join(projectPath, 'bin'), { recursive: true });
+    console.log('Removing useless files');
+
+    fs.rm('./.git', { recursive: true, force: true });
+    fs.rm(path.join(projectPath, 'bin'), { recursive: true });
 
     console.log('The installation is done, this is ready to use !');
   } catch (error) {
     console.log(error);
   }
 }
-
 main();
