@@ -38,8 +38,8 @@ async function main() {
 
     console.log('Removing useless files');
 
-    fs.rm('./.git', { recursive: true, force: true });
-    fs.rm(path.join(projectPath, 'bin'), { recursive: true });
+    await fs.promises.rm('./.git', { recursive: true, force: true });
+    await fs.promises.rm(path.join(projectPath, 'bin'), { recursive: true });
 
     console.log('The installation is done, this is ready to use !');
   } catch (error) {
