@@ -36,8 +36,6 @@ async function main() {
     console.log('Installing dependencies...');
     execSync('npm install');
 
-    console.log('Removing useless files');
-
     await fs.promises.rm('./.git', { recursive: true, force: true });
     await fs.promises.rm(path.join(projectPath, 'bin'), { recursive: true });
 

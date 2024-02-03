@@ -9,7 +9,7 @@ This starter provides a minimal setup for creating a react application.
 ```
 npx react-emotion-starter my-app
 cd my-app
-npm run dev
+npm run dev # or yarn dev
 ```
 
 ## Tech Stack

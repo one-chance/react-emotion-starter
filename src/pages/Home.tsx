@@ -66,7 +66,7 @@ export default function Home() {
         </Flex>
 
         <Text
-          color="white"
+          color="text-color"
           css={{ fontSize: isMobile ? '36px' : '48px' }}
           weight="bold"
           center

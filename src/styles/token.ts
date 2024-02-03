@@ -1,7 +1,3 @@
-export const Fonts = {
-  body: `'Noto Sans KR', sans-serif`,
-};
-
 // font-size
 export const FontSizes = {
   xxSmall: '0.625rem', // 10px
