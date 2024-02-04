@@ -10,6 +10,7 @@ type ButtonProps = ComponentPropsWithRef<'button'> & {
   weight?: keyof typeof FontWeights;
   background?: keyof typeof Colors;
   border?: keyof typeof Colors;
+  color?: keyof typeof Colors;
   radius?: number;
   flex?: boolean;
   width?: keyof typeof Sizes | number;
@@ -30,6 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       weight,
       background,
       border,
+      color,
       radius,
       flex,
       width,
@@ -54,6 +56,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       backgroundColor:
         Colors[background as keyof typeof Colors] || 'transparent',
       border: 'none',
+      color: Colors[color as keyof typeof Colors] || Colors['text-color'],
       outline: 'none',
       margin: 0,
       padding: 0,

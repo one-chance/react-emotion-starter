@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { Box, Button, Flex, Icon, NavLink, Text } from '@components/shared';
+import { Box, Button, Flex, Icon, NavLink } from '@components/shared';
 import { useTheme } from '@hooks/index';
 
 export default function Header() {
@@ -85,7 +85,7 @@ export default function Header() {
                   minHeight={28}
                   onClick={() => changeLanguage('ko')}
                 >
-                  <Text>한국어</Text>
+                  한국어
                 </Button>
 
                 <Button
@@ -94,7 +94,7 @@ export default function Header() {
                   minHeight={28}
                   onClick={() => changeLanguage('en')}
                 >
-                  <Text>English</Text>
+                  English
                 </Button>
               </Flex>
             )}
