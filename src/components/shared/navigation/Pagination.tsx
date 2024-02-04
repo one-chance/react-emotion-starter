@@ -50,6 +50,7 @@ export default function Pagination({
       padding={padding}
     >
       <Button
+        color="text-color"
         disabled={currentPage === 1}
         onClick={() => movePage(Math.max(1, currentPage - 5))}
       >
@@ -61,6 +62,7 @@ export default function Pagination({
           key={pageNumber}
           background={currentPage === pageNumber ? 'primary' : undefined}
           border="primary"
+          color="text-color"
           height={36}
           radius={8}
           width={36}
@@ -71,6 +73,7 @@ export default function Pagination({
       ))}
 
       <Button
+        color="text-color"
         disabled={totalPage < 5 || currentPage === totalPage}
         onClick={() => movePage(Math.min(totalPage, currentPage + 5))}
       >

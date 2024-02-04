@@ -10,6 +10,7 @@ type ButtonProps = ComponentPropsWithRef<'button'> & {
   weight?: keyof typeof FontWeights;
   background?: keyof typeof Colors;
   border?: keyof typeof Colors;
+  color?: keyof typeof Colors;
   radius?: number;
   flex?: boolean;
   width?: keyof typeof Sizes | number;
@@ -30,6 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       weight,
       background,
       border,
+      color,
       radius,
       flex,
       width,
@@ -47,6 +49,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const css: CSSObject = {
       display: 'inline-flex',
       alignItems: 'center',
+      color: Colors[color as keyof typeof Colors] || Colors['text-color'],
       justifyContent: 'center',
       fontFamily: font || 'inherit',
       fontSize: FontSizes[size as keyof typeof FontSizes] || '1rem',

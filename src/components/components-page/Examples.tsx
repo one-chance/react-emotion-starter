@@ -193,7 +193,7 @@ const Examples = ({ component }: ExamplesProps) => {
 
   const SvgExample = useMemo(
     () => (
-      <Svg height={16} width={16}>
+      <Svg fill="icon-color" height={16} width={16}>
         <path
           clipRule="evenodd"
           d="M5.53 4.47a.75.75 0 00-1.06 1.06L10.94 12l-6.47 6.47a.75.75 0 101.06 1.06L12 13.06l6.47 6.47a.75.75 0 101.06-1.06L13.06 12l6.47-6.47a.75.75 0 00-1.06-1.06L12 10.94 5.53 4.47z"
