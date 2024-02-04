@@ -46,7 +46,7 @@ export default function Box({
 }: BoxProps<LayoutElement>) {
   const css: CSSObject = {
     display: 'block',
-    backgroundColor: Colors[background as keyof typeof Colors] || 'transparent',
+    backgroundColor: Colors[background as keyof typeof Colors] || '',
     ...(border && {
       border: '1px solid',
       borderColor: Colors[border as keyof typeof Colors] || 'black',

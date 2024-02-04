@@ -1,2 +1,1 @@
-export * from './props';
-export * from './sidebar';
+export * from './example';

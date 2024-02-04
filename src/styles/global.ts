@@ -22,8 +22,6 @@ export const globalStyle = css`
   }
 
   :root {
-    --left-padding: 0;
-
     --color-primary: #775da6;
     --color-secondary: #196a73;
     --color-black: #000000;
@@ -60,7 +58,6 @@ export const globalStyle = css`
     background-color: #ffffff;
 
     --background-color: #ffffff;
-    --sidebar-background: #eeeeee;
     --text-color: var(--color-black);
     --icon-color: var(--color-black);
   }
@@ -69,7 +66,6 @@ export const globalStyle = css`
     background-color: #202020;
 
     --background-color: #202020;
-    --sidebar-background: #191919;
     --text-color: var(--color-white);
     --icon-color: var(--color-white);
   }

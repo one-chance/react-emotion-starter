@@ -52,7 +52,6 @@ export const Colors = {
   dim: 'var(--color-dim)',
   primary: 'var(--color-primary)',
   secondary: 'var(--color-secondary)',
-  'sidebar-background': 'var(--sidebar-background)',
   background: 'var(--background-color)',
 
   'black-900': 'var(--color-black-900)',

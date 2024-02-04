@@ -4,12 +4,11 @@ export default function NotFound() {
   return (
     <Flex
       alignItems="center"
-      background="background"
+      css={{ top: 60 }}
       direction="column"
       gap={40}
       height="full"
       justifyContent="center"
-      zIndex={100}
       fixed
     >
       <Text size="xxLarge" weight="bold">

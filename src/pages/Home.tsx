@@ -1,7 +1,7 @@
 import { CSSObject } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
 
-import { Flex, Image, Link, NavLink, Text } from '@components/shared';
+import { Flex, Image, Link, Text } from '@components/shared';
 import { useResponsive } from '@hooks/useResponsive';
 
 export default function Home() {
@@ -84,36 +84,20 @@ export default function Home() {
           {t('home.description')}
         </Text>
 
-        <Flex alignItems="center" gap={16}>
-          <NavLink
-            border="text-color"
-            color="text-color"
-            padding="10px 0"
-            radius={8}
-            size={isMobile ? 'normal' : 'large'}
-            to="/docs/guide/getting-started"
-            weight="bold"
-            width={isMobile ? 120 : 140}
-            center
-          >
-            {t('home.start')}
-          </NavLink>
-
-          <Link
-            aria-label="github site"
-            background="primary"
-            color="white"
-            href="https://github.com/one-chance/react-emotion-starter"
-            padding="10px 0"
-            radius={8}
-            size={isMobile ? 'normal' : 'large'}
-            weight="bold"
-            width={isMobile ? 120 : 140}
-            center
-          >
-            Github
-          </Link>
-        </Flex>
+        <Link
+          aria-label="github site"
+          background="primary"
+          color="white"
+          href="https://github.com/one-chance/react-emotion-starter"
+          padding="10px 0"
+          radius={8}
+          size={isMobile ? 'normal' : 'large'}
+          weight="bold"
+          width={isMobile ? 120 : 140}
+          center
+        >
+          Github
+        </Link>
       </Flex>
     </Flex>
   );

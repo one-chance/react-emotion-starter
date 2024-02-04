@@ -1,18 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
 
-import { SidebarModal } from '@components/modal';
 import { Box, Button, Flex, Icon, NavLink, Text } from '@components/shared';
-import { useModal, useTheme } from '@hooks/index';
+import { useTheme } from '@hooks/index';
 
 export default function Header() {
   const { i18n } = useTranslation();
-  const { pathname } = useLocation();
   const language = i18n.language;
   const { theme, toggleTheme } = useTheme();
-  const { closeModal, openModal, showModal } = useModal();
 
   const wrapperRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -44,7 +40,6 @@ export default function Header() {
   return (
     <Box
       as="header"
-      background="background"
       css={{
         position: 'fixed',
         top: 0,
@@ -57,18 +52,10 @@ export default function Header() {
       height={60}
       padding="0 20px"
     >
-      <Flex height="full" justifyContent="between">
-        <Flex alignItems="center" gap={8}>
-          {pathname.includes('docs') && (
-            <Button onClick={() => openModal('sidebar-modal')}>
-              <Icon color="icon-color" name="menu" size={24} />
-            </Button>
-          )}
-
-          <NavLink size="large" to="/" weight="bold">
-            RE Starter
-          </NavLink>
-        </Flex>
+      <Flex alignItems="center" height="full" justifyContent="between">
+        <NavLink size="large" to="/" weight="bold">
+          RE Starter
+        </NavLink>
 
         <Flex alignItems="center" gap={8}>
           <Flex direction="row" justifyContent="end">
@@ -84,7 +71,7 @@ export default function Header() {
             {showLanguage && (
               <Flex
                 ref={wrapperRef}
-                background="sidebar-background"
+                background="background"
                 border="black-200"
                 css={{ position: 'absolute', marginTop: '36px' }}
                 direction="column"
@@ -122,10 +109,6 @@ export default function Header() {
           </Button>
         </Flex>
       </Flex>
-
-      {showModal('sidebar-modal') && (
-        <SidebarModal close={() => closeModal('sidebar-modal')} />
-      )}
     </Box>
   );
 }

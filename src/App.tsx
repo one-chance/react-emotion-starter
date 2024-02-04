@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { useTheme } from '@hooks/index';
 import { HeaderRouter, MainRouter } from '@routes/index';
-import SidebarRouter from '@routes/SidebarRouter';
 import { globalStyle } from '@styles/index';
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <Global styles={globalStyle} />
 
       <HeaderRouter />
-      <SidebarRouter />
       <MainRouter />
     </QueryClientProvider>
   );
