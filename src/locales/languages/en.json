@@ -48,7 +48,7 @@
     "select": {
         "description": "Select component is used along with Option component to allow the user to select one option from multiple options.",
         "import-code": "import { Select, Option } from '@components/shared';",
-        "usage-code": "<Select name={NAMES[selected]} maxHeight={180}>\n\t<Option selected={NAMES[selected]} values={NAMES} onSelect={selectName} />\n</Select>",
+        "usage-code": "<Select name={NAMES[selected]} maxHeight={180}>\n\t<Option height={32} selected={NAMES[selected]} values={NAMES} onSelect={selectName} />\n</Select>",
         "props-description": "The following props are applied to Select component and Option component."
     },
     "textarea": {

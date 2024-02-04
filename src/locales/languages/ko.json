@@ -46,9 +46,9 @@
         "props-description": "Input 컴포넌트는 <input />의 기본 속성을 모두 포함하며, 다음 props들이 적용됩니다."
     },
     "select": {
-        "description": "Selct 컴포넌트는 Option 컴포넌트와 함께 사용자가 여러 개의 옵션 중에서 하나를 선택하는 데 사용됩니다.",
+        "description": "Select 컴포넌트는 Option 컴포넌트와 함께 사용자가 여러 개의 옵션 중에서 하나를 선택하는 데 사용됩니다.",
         "import-code": "import { Select, Option } from '@components/shared';",
-        "usage-code": "<Select name={NAMES[selected]} maxHeight={180}>\n\t<Option height={32} selecteed={NAMES[selected]} values={NAMES} onSelect={selectName} />\n</Select>",
+        "usage-code": "<Select name={NAMES[selected]} maxHeight={180}>\n\t<Option height={32} selected={NAMES[selected]} values={NAMES} onSelect={selectName} />\n</Select>",
         "props-description": "Select 컴포넌트와 Option 컴포넌트에는 다음과 같은 props가 적용됩니다."
     },
     "textarea": {
@@ -60,7 +60,7 @@
     "text-field": {
         "description": "TextField 컴포넌트는 사용자가 텍스트를 입력하고 편집하는 데 사용됩니다.",
         "import-code": "import { TextField } from '@components/shared';",
-        "usage-code": "<TextField as='underlined' placeholder='텍스트' value={text} onChange={inputText} />",
+        "usage-code": "<TextField as='underlined' border='gray' placeholder='텍스트' value={text} onChange={inputText} />",
         "props-description": "Textfield 컴포넌트는 <input />의 기본 속성을 모두 포함하며, 다음 props들이 적용됩니다."
     },
     "box": {
