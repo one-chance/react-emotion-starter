@@ -22,8 +22,6 @@ export const globalStyle = css`
   }
 
   :root {
-    --left-padding: 0;
-
     --color-primary: #775da6;
     --color-secondary: #196a73;
     --color-black: #000000;

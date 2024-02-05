@@ -1,6 +1,6 @@
 {
   "name": "react-emotion-starter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A starter kit based on React and Emotion to easily create applications.",
   "keywords": [
     "boilerplate",
@@ -12,16 +12,14 @@
     "swc",
     "recoil",
     "react-query",
-    "i18next",
-    "eslint",
-    "prettier"
+    "i18next"
   ],
   "type": "module",
   "author": "one-chance",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "ttps://github.com/one-chance/react-emotion-starter"
+    "url": "git+https://github.com/one-chance/react-emotion-starter.git"
   },
   "bin": {
     "react-emotion-starter": "./bin/react-emotion-starter.js"
