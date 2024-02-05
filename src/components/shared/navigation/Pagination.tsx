@@ -61,6 +61,7 @@ export default function Pagination({
           key={pageNumber}
           background={currentPage === pageNumber ? 'primary' : undefined}
           border="primary"
+          color="text-color"
           height={36}
           radius={8}
           width={36}

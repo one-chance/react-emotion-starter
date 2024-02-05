@@ -12,16 +12,14 @@
     "swc",
     "recoil",
     "react-query",
-    "i18next",
-    "eslint",
-    "prettier"
+    "i18next"
   ],
   "type": "module",
   "author": "one-chance",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "ttps://github.com/one-chance/react-emotion-starter"
+    "url": "git+https://github.com/one-chance/react-emotion-starter.git"
   },
   "bin": {
     "react-emotion-starter": "./bin/react-emotion-starter.js"
