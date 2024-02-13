@@ -2,7 +2,7 @@
 
 This starter provides a minimal setup for creating a react application.
 
-### 👉 [View Demo](https://dx30rj3h3cqsq.cloudfront.net)
+### 👉 [View Demo and Document](https://dx30rj3h3cqsq.cloudfront.net)
 
 ## Quick Start
 

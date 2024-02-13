@@ -1,7 +1,7 @@
 {
   "name": "react-emotion-starter",
   "version": "1.2.3",
-  "description": "A starter kit based on React and Emotion to easily create applications.",
+  "description": "Starter kit to easily create SPA based on react and emotion.",
   "keywords": [
     "boilerplate",
     "react",
@@ -41,7 +41,6 @@
     "recoil": "^0.7.7"
   },
   "devDependencies": {
-    "@emotion/eslint-plugin": "^11.11.0",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
