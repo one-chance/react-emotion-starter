@@ -37,10 +37,10 @@ export default function Text({
   ...props
 }: TextProps) {
   const css: CSSObject = {
-    color: Colors[color as keyof typeof Colors] || Colors['text-color'],
     fontFamily: font || 'inherit',
     fontSize: FontSizes[size as keyof typeof FontSizes] || '1rem',
     fontWeight: FontWeights[weight as keyof typeof FontWeights] || 400,
+    color: Colors[color as keyof typeof Colors] || Colors['text-color'],
     backgroundColor: Colors[background as keyof typeof Colors] || 'transparent',
     ...(border && {
       border: '1px solid',
