@@ -439,7 +439,53 @@ const PAGINATION_PROPS = [
   ...DEFAULT_PROPS,
 ];
 
-const TEXT_PROPS = [...FONT_PROPS, ...DEFAULT_PROPS];
+const TEXT_PROPS = [
+  ...FONT_PROPS,
+  {
+    name: 'background',
+    type: 'Colors',
+    property: 'background-color',
+    default: 'transparent',
+  },
+  {
+    name: 'border',
+    type: 'Colors',
+    property: 'border-color',
+    default: '-',
+  },
+  {
+    name: 'width',
+    type: 'Sizes | number',
+    property: 'width',
+    default: '-',
+  },
+  {
+    name: 'minWidth',
+    type: 'Sizes | number',
+    property: 'min-width',
+    default: '-',
+  },
+  {
+    name: 'maxWidth',
+    type: 'Sizes | number',
+    property: 'max-width',
+    default: '-',
+  },
+  {
+    name: 'margin',
+    type: 'string',
+    property: 'margin',
+    default: '-',
+  },
+  {
+    name: 'padding',
+    type: 'string',
+    property: 'padding',
+    default: '-',
+  },
+];
+
+const LABEL_PROPS = TEXT_PROPS;
 
 const HEADING_PROPS = [
   {
@@ -448,9 +494,10 @@ const HEADING_PROPS = [
     property: '-',
     default: '-',
   },
-  ...FONT_PROPS,
-  ...DEFAULT_PROPS,
+  ...TEXT_PROPS,
 ];
+
+const PARAGRAPH_PROPS = TEXT_PROPS;
 
 export const PROPS = {
   button: BUTTON_PROPS,
@@ -470,6 +517,7 @@ export const PROPS = {
   navlink: NAVLINK_PROPS,
   pagination: PAGINATION_PROPS,
   text: TEXT_PROPS,
-  label: TEXT_PROPS,
+  label: LABEL_PROPS,
   heading: HEADING_PROPS,
+  paragraph: PARAGRAPH_PROPS,
 };

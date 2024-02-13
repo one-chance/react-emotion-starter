@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { Flex, Text } from '@components/shared';
+import { Flex, Paragraph, Text } from '@components/shared';
 import { useResponsive } from '@hooks/index';
 import { capitalizeEachWord } from '@utils/index';
 
@@ -38,13 +38,9 @@ export default function GuideDocument() {
           Installation
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}installation-description`)}
-        </Text>
+        </Paragraph>
 
         <SyntaxHighlighter
           children={`npx react-emotion-starter my-app\ncd my-app\nnpm run dev`}
@@ -59,13 +55,9 @@ export default function GuideDocument() {
           Stack share
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}stack-share-description`)}
-        </Text>
+        </Paragraph>
       </Flex>
 
       <Flex direction="column" gap={20}>
@@ -73,13 +65,9 @@ export default function GuideDocument() {
           Features
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}features-description`)}
-        </Text>
+        </Paragraph>
       </Flex>
 
       <Flex direction="column" gap={20}>
@@ -87,13 +75,9 @@ export default function GuideDocument() {
           Roadmap
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}roadmap-description`)}
-        </Text>
+        </Paragraph>
       </Flex>
     </Flex>
   );

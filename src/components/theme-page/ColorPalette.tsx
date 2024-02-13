@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { Box, Flex, Text } from '@components/shared';
+import { Box, Flex, Paragraph, Text } from '@components/shared';
 import { Colors } from '@styles/index';
 
 type DocumentProps = {
@@ -93,13 +93,9 @@ export default function ColorPalette({ isMobile }: DocumentProps) {
           style={a11yDark}
         />
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}customization-guide1`)}
-        </Text>
+        </Paragraph>
 
         <SyntaxHighlighter
           children={`// token.ts\nexport const Colors = {\n\tblack: "var(--color-black)",\n\twhite: "var(--color-white)"\n};`}

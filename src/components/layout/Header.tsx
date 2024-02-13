@@ -94,7 +94,7 @@ export default function Header() {
               >
                 <Button
                   css={{ justifyContent: 'flex-start' }}
-                  disabled={language === 'ko'}
+                  disabled={language.includes('ko')}
                   minHeight={28}
                   onClick={() => changeLanguage('ko')}
                 >
@@ -103,7 +103,7 @@ export default function Header() {
 
                 <Button
                   css={{ justifyContent: 'flex-start' }}
-                  disabled={language === 'en'}
+                  disabled={language.includes('en')}
                   minHeight={28}
                   onClick={() => changeLanguage('en')}
                 >

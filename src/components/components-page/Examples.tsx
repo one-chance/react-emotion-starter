@@ -22,6 +22,7 @@ import {
   Flex,
   Grid,
   Pagination,
+  Paragraph,
 } from '@components/shared';
 import { useModal } from '@hooks/useModal';
 
@@ -253,6 +254,17 @@ const Examples = ({ component }: ExamplesProps) => {
     [],
   );
 
+  const PragraphExample = useMemo(
+    () => (
+      <Paragraph color="text-color" size="small" width="full">
+        문장1
+        <br />
+        문장2
+      </Paragraph>
+    ),
+    [],
+  );
+
   const TotalExamples: { [key: string]: ReactNode } = {
     button: ButtonExample,
     input: InputExample,
@@ -273,6 +285,7 @@ const Examples = ({ component }: ExamplesProps) => {
     text: TextExample,
     label: LabelExample,
     heading: HeadingExample,
+    paragraph: PragraphExample,
   };
 
   return TotalExamples[component];

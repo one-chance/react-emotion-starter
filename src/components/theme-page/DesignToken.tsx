@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { Flex, Text } from '@components/shared';
+import { Flex, Paragraph, Text } from '@components/shared';
 
 type DocumentProps = {
   isMobile: boolean;
@@ -20,26 +20,18 @@ export default function DesignToken({ isMobile }: DocumentProps) {
 
   return (
     <Flex direction="column" gap={isMobile ? 40 : 60}>
-      <Text
-        color="gray"
-        css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-        size={isMobile ? 'small' : 'normal'}
-      >
+      <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
         {t(`${path}description`)}
-      </Text>
+      </Paragraph>
 
       <Flex direction="column" gap={20}>
         <Text size={isMobile ? 'large' : 'xLarge'} weight="bold">
           Fonts Token
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}font-token-description`)}
-        </Text>
+        </Paragraph>
 
         <SyntaxHighlighter
           children={`const FontSizes = {\n\txxSmall: '0.625rem',\n\txSmall: '0.75rem',\n\tsmall: '0.874rem',\n\tnormal: '1rem',\n\tlarge: '1.25rem',\n\txLarge: '1.5rem',\n\txxLarge: '1.75rem',\n\txxxLarge: '2rem',\n};`}
@@ -61,13 +53,9 @@ export default function DesignToken({ isMobile }: DocumentProps) {
           Sizes Token
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}size-token-description`)}
-        </Text>
+        </Paragraph>
 
         <SyntaxHighlighter
           children={`const Sizes = {\n\tmax: 'max-content',\n\tmin: 'min-content',\n\tfit: 'fit-content',\n\tfull: '100%',\n\tauto: 'auto',\n\t0 : '0',\n\t's-90': '90%',\n\t's-80': '80%',\n\t's-70': '70%',\n\t's-60': '60%',\n\t's-50': '50%',\n\t's-40': '40%',\n\t's-30': '30%',\n\t's-20': '20%',\n\t's-10': '10%',\n};`}
@@ -82,13 +70,9 @@ export default function DesignToken({ isMobile }: DocumentProps) {
           Colors Token
         </Text>
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}color-token-description`)}
-        </Text>
+        </Paragraph>
 
         <SyntaxHighlighter
           children={`const Colors = {\n\tblack: 'var(--color-black)',\n\twhite: 'var(--color-white)',\n\tgray: 'var(--color-gray)',\n\tgreen: 'var(--color-green)',\n\tred: 'var(--color-red)',\n\tdim: 'var(--color-dim)',\n\tprimary: 'var(--color-primary)',\n\tsecondary: 'var(--color-secondary)',\n\t'sidebar-background': 'var(--sidebar-background)',\n\tbackground: 'var(--background-color)',\n\t'text-color': 'var(--text-color)',\n\t'icon-color': 'var(--icon-color)',\n};`}

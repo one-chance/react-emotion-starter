@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 import { Examples } from '@components/components-page';
-import { Flex, Text } from '@components/shared';
+import { Flex, Paragraph, Text } from '@components/shared';
 import { PROPS } from '@constants/index';
 import { useResponsive } from '@hooks/useResponsive';
 import { Colors } from '@styles/token';
@@ -88,13 +88,9 @@ export default function CompnentDocument() {
             Props
           </Text>
 
-          <Text
-            color="gray"
-            css={{ whiteSpace: 'pre-wrap' }}
-            size={isMobile ? 'small' : 'normal'}
-          >
+          <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
             {t(`${title}.props-description`)}
-          </Text>
+          </Paragraph>
 
           <Flex direction="column">
             <Flex

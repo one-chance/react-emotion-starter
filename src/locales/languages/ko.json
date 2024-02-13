@@ -22,10 +22,9 @@
         "default-mode-description": "처음 방문시 사용자의 OS 설정에 따라 모드가 선택되며, 설정 값이 없는 경우에는 다크 모드가 적용됩니다.\n웹사이트가 열려 있는 동안 사용자가 설정을 변경하면, 웹사이트는 이를 반영하여 색상 모드를 변경합니다.",
         "toggling-mode-description": "useTheme 훅을 사용하여 현재 모드를 확인하거나, 다른 모드로 토글할 수 있습니다.\ntheme은 전역 변수가 아니라서 다른 컴포넌트에서의 변경사항이 전달되지 않습니다.\n따라서 오직 하나의 토글 버튼을 표시하기 위해서만 사용해야 합니다.",
         "usage-description": "라이트 모드와 다크 모드의 색상은 CSS variable을 통해 제공됩니다.",
-        "usage-guide1": "global.ts 파일의 globalStyle에 각각의 모드에서 적용할 변수를 정의합니다.",
-        "usage-guide2": "globalStyle은 @emotion/react의 Global을 통해 애플리케이션 전역에 적용되는 스타일입니다.",
-        "usage-guide3": "선언한 변수를 각종 컴포넌트에서 사용하기 위해 token.ts 파일의 Colors에 매칭합니다.",
-        "usage-guide4": "Colors 토큰에 선언한 색상을 컴포넌트에서 사용하면 현재 색상 모드에 맞는 색이 적용됩니다."
+        "usage-guide1": "global.ts 파일의 globalStyle에 각각의 모드에서 적용할 변수를 정의합니다.\nglobalStyle은 @emotion/react의 Global을 통해 애플리케이션 전역에 적용되는 스타일입니다.",
+        "usage-guide2": "선언한 변수를 각종 컴포넌트에서 사용하기 위해 token.ts 파일의 Colors에 매칭합니다.",
+        "usage-guide3": "Colors 토큰에 선언한 색상을 컴포넌트에서 사용하면 현재 색상 모드에 맞는 색이 적용됩니다."
     },
     "design-token": {
         "description": "token.ts 파일에 미리 정의된 토큰을 사용하여 css 속성을 쉽고 편리하게 변경할 수 있습니다.",
@@ -146,5 +145,11 @@
         "import-code": "import { Heading } from '@components/shared';",
         "usage-code": "<Heading as='h2' color='text-color'>제목</Heading>",
         "props-description": "Heading 컴포넌트는 <h1/>의 기본 속성을 모두 포함하며, 다음 props들이 적용됩니다."
+    },
+    "paragraph": {
+        "description": "Paragraph 컴포넌트는 여러 줄의 텍스트를 표시하는 데 사용됩니다.",
+        "import-code": "import { Paragraph } from '@components/shared';",
+        "usage-code": "<Paragaph width='full'>\n\t문장1\n\t문장2\n</Paragaph>",
+        "props-description": "Paragraph 컴포넌트는 <p/>의 기본 속성을 모두 포함하며, 다음 props들이 적용됩니다."
     }
 }

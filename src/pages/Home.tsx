@@ -1,7 +1,14 @@
 import { CSSObject } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
 
-import { Flex, Image, Link, NavLink, Text } from '@components/shared';
+import {
+  Flex,
+  Image,
+  Link,
+  NavLink,
+  Paragraph,
+  Text,
+} from '@components/shared';
 import { useResponsive } from '@hooks/useResponsive';
 
 export default function Home() {
@@ -74,15 +81,14 @@ export default function Home() {
           React Emotion Starter
         </Text>
 
-        <Text
+        <Paragraph
           color="gray"
-          css={{ lineHeight: '1.5', whiteSpace: 'pre-wrap' }}
           padding="0 13px"
           size={isMobile ? 'normal' : 'large'}
           center
         >
           {t('home.description')}
-        </Text>
+        </Paragraph>
 
         <Flex alignItems="center" gap={16}>
           <NavLink

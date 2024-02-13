@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { Flex, Text } from '@components/shared';
+import { Flex, Paragraph, Text } from '@components/shared';
 
 type DocumentProps = {
   isMobile: boolean;
@@ -30,13 +31,9 @@ export default function DarkMode({ isMobile }: DocumentProps) {
         </Text>
 
         <Flex direction="column" gap={4}>
-          <Text
-            color="gray"
-            css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-            size={isMobile ? 'small' : 'normal'}
-          >
+          <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
             {t(`${path}default-mode-description`)}
-          </Text>
+          </Paragraph>
         </Flex>
       </Flex>
 
@@ -52,13 +49,9 @@ export default function DarkMode({ isMobile }: DocumentProps) {
           style={a11yDark}
         />
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5, whiteSpace: 'pre-wrap' }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}toggling-mode-description`)}
-        </Text>
+        </Paragraph>
       </Flex>
 
       <Flex direction="column" gap={20}>
@@ -77,15 +70,9 @@ export default function DarkMode({ isMobile }: DocumentProps) {
           style={a11yDark}
         />
 
-        <Text
-          color="gray"
-          css={{ lineHeight: 1.5 }}
-          size={isMobile ? 'small' : 'normal'}
-        >
+        <Paragraph color="gray" size={isMobile ? 'small' : 'normal'}>
           {t(`${path}usage-guide1`)}
-          <br />
-          {t(`${path}usage-guide2`)}
-        </Text>
+        </Paragraph>
 
         <SyntaxHighlighter
           children={`// token.ts\nexport const Colors = {\n\t"text-color": "var(--text-color)",\n};`}
@@ -95,7 +82,7 @@ export default function DarkMode({ isMobile }: DocumentProps) {
         />
 
         <Text color="gray" size={isMobile ? 'small' : 'normal'}>
-          {t(`${path}usage-guide3`)}
+          {t(`${path}usage-guide2`)}
         </Text>
 
         <SyntaxHighlighter
@@ -106,7 +93,7 @@ export default function DarkMode({ isMobile }: DocumentProps) {
         />
 
         <Text color="gray" size={isMobile ? 'small' : 'normal'}>
-          {t(`${path}usage-guide4`)}
+          {t(`${path}usage-guide3`)}
         </Text>
       </Flex>
     </Flex>

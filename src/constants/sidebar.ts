@@ -23,6 +23,6 @@ export const COMPONENTS: ComponentTree[] = [
   },
   {
     main: 'TYPOGRAPHY',
-    sub: ['Text', 'Label', 'Heading'],
+    sub: ['Label', 'Heading', 'Paragraph', 'Text'],
   },
 ];

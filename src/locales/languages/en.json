@@ -22,10 +22,9 @@
         "default-mode-description": "Default mode is selected based on the user's OS settings. If no settings are found, dark mode is applied\nIf your settings change while the website is open, the website will change its color mode to reflect this.",
         "toggling-mode-description": "You can use the useTheme to check the current mode, or toggle to another mode.\nBecause theme is not a global variable, changes in other components are not reflected.\nTherefore, it should only be used to display a single toggle button.",
         "usage-description": "The colors of each mode are provided through CSS variables.",
-        "usage-guide1": "Define variables to be applied in each mode in globalStyle of the global.ts.",
-        "usage-guide2": "GlobalStyle is a style that is applied throughout the application through Global in @emotion/react.",
-        "usage-guide3": "To use declared variables in various components, match them to Colors in the token.ts",
-        "usage-guide4": "When using colors declared in the Colors token in a component, the color adapts to the current color mode."
+        "usage-guide1": "Define variables to be applied in each mode in globalStyle of the global.ts.\nGlobalStyle is a style that is applied throughout the application through Global in @emotion/react.",
+        "usage-guide2": "To use declared variables in various components, match them to Colors in the token.ts",
+        "usage-guide3": "When using colors declared in the Colors token in a component, the color adapts to the current color mode."
     },
     "design-token": {
         "description": "You can easily and conveniently change css properties using predefined tokens in the token.ts.",
@@ -146,5 +145,11 @@
         "import-code": "import { Heading } from '@components/shared';",
         "usage-code": "<Heading as='h2' color='text-color'>Title</Heading>",
         "props-description": "Heading component contains all the properties of the <h1/> and the following props are applied."
+    },
+    "paragraph": {
+        "description": "Paragraph component is used to display multiple text.",
+        "import-code": "import { Paragraph } from '@components/shared';",
+        "usage-code": "<Paragaph width='full'>\n\t문장1\n\t문장2\n</Paragaph>",
+        "props-description": "Paragraph component contains all the properties of the <p/> and the following props are applied."
     }
 }

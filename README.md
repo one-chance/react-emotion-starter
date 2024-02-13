@@ -2,7 +2,7 @@
 
 This starter provides a minimal setup for creating a react application.
 
-### 👉 [View Demo](https://dx30rj3h3cqsq.cloudfront.net)
+### 👉 [View Demo and Document](https://dx30rj3h3cqsq.cloudfront.net)
 
 ## Quick Start
 
@@ -42,9 +42,9 @@ components
 └─shared
   ├─ input         # Button, Input, Select, TextArea, TextField
   ├─ layout        # Box, Flex, Grid
-  ├─ media         # Image, Svg, Icon
+  ├─ media         # Icon, Image, Svg
   ├─ navigation    # Link, NavLink, Pagination
-  └─ typography    # Text, Label, Heading
+  └─ typography    # Heading, Label, Paragraph, Text
 ```
 
 ## License
