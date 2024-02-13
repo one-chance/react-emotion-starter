@@ -2,18 +2,57 @@ import { ComponentProps } from 'react';
 
 import { CSSObject, jsx } from '@emotion/react';
 
-import { Colors } from '@styles/index';
+import { Colors, FontSizes, FontWeights, Sizes } from '@styles/index';
 
 type HeadingProps = ComponentProps<'h1'> & {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  margin?: string;
+  font?: string;
+  size?: keyof typeof FontSizes;
+  weight?: keyof typeof FontWeights;
   color?: keyof typeof Colors;
+  background?: keyof typeof Colors;
+  border?: keyof typeof Colors;
+  width?: keyof typeof Sizes | number;
+  minWidth?: keyof typeof Sizes | number;
+  maxWidth?: keyof typeof Sizes | number;
+  margin?: string;
+  padding?: string;
 };
 
-export default function Heading({ as, margin, color, ...props }: HeadingProps) {
+export default function Heading({
+  as,
+  font,
+  size,
+  weight,
+  color,
+  background,
+  border,
+  width,
+  minWidth,
+  maxWidth,
+  margin,
+  padding,
+  ...props
+}: HeadingProps) {
   const css: CSSObject = {
+    fontFamily: font || 'inherit',
+    fontSize: FontSizes[size as keyof typeof FontSizes] || '1rem',
+    fontWeight: FontWeights[weight as keyof typeof FontWeights] || 400,
     color: Colors[color as keyof typeof Colors] || 'black',
+    backgroundColor: Colors[background as keyof typeof Colors] || 'transparent',
+    ...(border && {
+      border: '1px solid',
+      borderColor: Colors[border as keyof typeof Colors] || 'transparent',
+    }),
+    ...(width && { width: Sizes[width as keyof typeof Sizes] || width }),
+    ...(minWidth && {
+      minWidth: Sizes[minWidth as keyof typeof Sizes] || minWidth,
+    }),
+    ...(maxWidth && {
+      maxWidth: Sizes[maxWidth as keyof typeof Sizes] || maxWidth,
+    }),
     ...(margin && { margin: margin }),
+    ...(padding && { padding: padding }),
   };
 
   return jsx(as, { css, ...props });

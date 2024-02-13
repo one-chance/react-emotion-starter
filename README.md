@@ -42,9 +42,9 @@ components
 └─shared
   ├─ input         # Button, Input, Select, TextArea, TextField
   ├─ layout        # Box, Flex, Grid
-  ├─ media         # Image, Svg, Icon
+  ├─ media         # Icon, Image, Svg
   ├─ navigation    # Link, NavLink, Pagination
-  └─ typography    # Text, Label, Heading
+  └─ typography    # Label, Heading, Paragraph, Text
 ```
 
 ## License
