@@ -3,7 +3,6 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: ['airbnb-typescript', 'prettier'],
   plugins: [
-    '@emotion',
     'import',
     'react',
     'react-hooks',
