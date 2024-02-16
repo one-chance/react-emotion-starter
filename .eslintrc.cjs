@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  extends: ['airbnb-typescript', 'prettier'],
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'prettier'],
   plugins: [
     'import',
     'react',
