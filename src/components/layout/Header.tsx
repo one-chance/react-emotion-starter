@@ -7,7 +7,7 @@ import { useTheme } from '@hooks/index';
 
 export default function Header() {
   const { i18n } = useTranslation();
-  const language = i18n.language;
+  const { language } = i18n;
   const { theme, toggleTheme } = useTheme();
 
   const wrapperRef = useRef<HTMLDivElement>(null);

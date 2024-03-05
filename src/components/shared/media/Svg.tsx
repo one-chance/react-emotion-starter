@@ -24,8 +24,8 @@ export default function Svg({
   const viewBox = `0 0 ${minWidth} ${minHeight}`;
 
   const css: CSSObject = {
-    ...(margin && { margin: margin }),
-    ...(padding && { padding: padding }),
+    ...(margin && { margin }),
+    ...(padding && { padding }),
   };
 
   return jsx('svg', {

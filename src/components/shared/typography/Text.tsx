@@ -55,8 +55,8 @@ export default function Text({
     ...(maxWidth && {
       maxWidth: Sizes[maxWidth as keyof typeof Sizes] || maxWidth,
     }),
-    ...(margin && { margin: margin }),
-    ...(padding && { padding: padding }),
+    ...(margin && { margin }),
+    ...(padding && { padding }),
   };
 
   return jsx('span', { css, ...props });

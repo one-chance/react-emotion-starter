@@ -54,8 +54,8 @@ export default function NavLink({
     }),
     ...(center && { textAlign: 'center' }),
     ...(radius && { borderRadius: `${radius}px` }),
-    ...(margin && { margin: margin }),
-    ...(padding && { padding: padding }),
+    ...(margin && { margin }),
+    ...(padding && { padding }),
   };
 
   return <Link css={css} {...props} />;

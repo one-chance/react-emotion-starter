@@ -16,8 +16,8 @@ export default function Image({
 }: ImageProps) {
   const css: CSSObject = {
     ...(ratio && { aspectRatio: ratio }),
-    ...(margin && { margin: margin }),
-    ...(padding && { padding: padding }),
+    ...(margin && { margin }),
+    ...(padding && { padding }),
   };
 
   return jsx('img', { css, ...props });

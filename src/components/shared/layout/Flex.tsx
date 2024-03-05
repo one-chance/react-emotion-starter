@@ -136,9 +136,9 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>(
       ...(maxHeight && {
         maxHeight: Sizes[maxHeight as keyof typeof Sizes] || maxHeight,
       }),
-      ...(margin && { margin: margin }),
-      ...(padding && { padding: padding }),
-      ...(zIndex && { zIndex: zIndex }),
+      ...(margin && { margin }),
+      ...(padding && { padding }),
+      ...(zIndex && { zIndex }),
       ...(pointer && { cursor: 'pointer' }),
     };
 

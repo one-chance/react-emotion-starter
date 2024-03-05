@@ -1,3 +1,1 @@
-export const exampleApi = () => {
-  return 'This is an example function for apis folder';
-};
+export const exampleApi = () => 'This is an example function for apis folder';

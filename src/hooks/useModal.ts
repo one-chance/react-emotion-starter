@@ -13,9 +13,7 @@ export const useModal = () => {
     setModals({ ...modals, [modalId]: false });
   };
 
-  const showModal = (modalId: string) => {
-    return modals[modalId] || false;
-  };
+  const showModal = (modalId: string) => modals[modalId] || false;
 
   return { openModal, closeModal, showModal };
 };

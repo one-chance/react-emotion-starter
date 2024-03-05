@@ -62,8 +62,8 @@ export default function Textarea({
       maxHeight: Sizes[maxHeight as keyof typeof Sizes] || maxHeight,
     }),
     ...(radius && { borderRadius: `${radius}px` }),
-    ...(margin && { margin: margin }),
-    ...(padding && { padding: padding }),
+    ...(margin && { margin }),
+    ...(padding && { padding }),
   };
 
   return jsx('textarea', { css, ...props });

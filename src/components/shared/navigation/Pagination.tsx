@@ -26,7 +26,7 @@ export default function Pagination({
 
   const getPageNumbers = () => {
     let startPage = Math.max(1, currentPage - 2);
-    let endPage = Math.min(totalPage, startPage + 4);
+    const endPage = Math.min(totalPage, startPage + 4);
 
     if (endPage - startPage < 4) {
       startPage = Math.max(1, endPage - 4);

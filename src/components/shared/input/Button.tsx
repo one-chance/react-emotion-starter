@@ -87,8 +87,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ...(maxHeight && {
         maxHeight: Sizes[maxHeight as keyof typeof Sizes] || maxHeight,
       }),
-      ...(margin && { margin: margin }),
-      ...(padding && { padding: padding }),
+      ...(margin && { margin }),
+      ...(padding && { padding }),
     };
 
     return jsx('button', { ref, css, ...props });

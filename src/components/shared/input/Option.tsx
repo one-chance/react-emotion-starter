@@ -61,7 +61,9 @@ export default function Option({
       {values.map((option: string, idx: number) => (
         <Flex
           key={option}
-          ref={(e: HTMLDivElement) => (refs.current[idx] = e)}
+          ref={(e: HTMLDivElement) => {
+            refs.current[idx] = e;
+          }}
           alignItems="center"
           css={optionCSS}
           tabIndex={0}
