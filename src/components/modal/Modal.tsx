@@ -15,15 +15,15 @@ export default function Modal({
   children,
   ...props
 }: ModalProps) {
-  const handleOverlayClick = () => {
-    onClose(modalId);
-  };
-
   const handleContentClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
 
   useEffect(() => {
+    const handleOverlayClick = () => {
+      onClose(modalId);
+    };
+
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         handleOverlayClick();
@@ -37,6 +37,7 @@ export default function Modal({
       document.body.style.overflow = '';
       document.body.removeEventListener('keydown', handleEscape);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return createPortal(
@@ -50,7 +51,7 @@ export default function Modal({
       zIndex={1000}
       fixed
       noScrollbar
-      onClick={handleOverlayClick}
+      onClick={() => onClose(modalId)}
     >
       <Flex
         css={{ overflowY: 'auto' }}

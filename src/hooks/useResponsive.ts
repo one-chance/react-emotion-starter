@@ -37,8 +37,8 @@ export const useMediaQury = () => {
   const MOBILE_WIDTH = 460;
   const TABLET_WIDTH = 1024;
 
-  const isMobile = width <= MOBILE_WIDTH ? true : false;
-  const isTablet = width <= TABLET_WIDTH ? true : false;
+  const isMobile = width <= MOBILE_WIDTH;
+  const isTablet = width <= TABLET_WIDTH;
 
   return { isMobile, isTablet };
 };

@@ -71,8 +71,8 @@ const Grid = forwardRef<HTMLDivElement, GridProps>(
       ...(maxHeight && {
         maxHeight: Sizes[maxHeight as keyof typeof Sizes] || maxHeight,
       }),
-      ...(margin && { margin: margin }),
-      ...(padding && { padding: padding }),
+      ...(margin && { margin }),
+      ...(padding && { padding }),
     };
 
     return jsx('div', { ref, css, ...props });

@@ -46,6 +46,7 @@ export default function SlideModal({
       document.body.style.overflow = '';
       document.body.removeEventListener('keydown', handleEscape);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return createPortal(

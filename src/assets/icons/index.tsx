@@ -59,8 +59,8 @@ export const checked = (
     <path
       d="M7.5 12l3 3 6-6"
       stroke="#fff"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Svg>
 );
@@ -68,9 +68,9 @@ export const checked = (
 export const arrowUp = (
   <Svg>
     <path
-      clip-rule="evenodd"
+      clipRule="evenodd"
       d="M4.192 15.754a.75.75 0 001.059.057l6.748-6.053 6.75 6.053a.75.75 0 101-1.116L12.5 8.192a.75.75 0 00-1.001 0l-7.25 6.503a.75.75 0 00-.057 1.059z"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     />
   </Svg>
 );

@@ -71,8 +71,11 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'import/prefer-default-export': 'off',
+    'no-plusplus': 'off',
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'react/jsx-sort-props': [
       'warn',
       {
@@ -82,6 +85,8 @@ module.exports = {
         reservedFirst: true,
       },
     ],
+    'react/require-default-props': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

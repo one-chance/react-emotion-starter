@@ -27,6 +27,7 @@ export default function Icon({ name, size, color, border, radius }: IconProps) {
   };
 
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <span css={css}>
       <SVGIcon />
     </span>
