@@ -1,6 +1,6 @@
-import * as path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import * as path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 
 const folderNames = [
   `apis`,
@@ -17,7 +17,7 @@ const folderNames = [
   `utils`,
 ];
 
-const aliases = folderNames.map((folder) => ({
+const aliases = folderNames.map(folder => ({
   find: `@${folder}`,
   replacement: path.resolve(__dirname, `src`, folder),
 }));
@@ -26,7 +26,7 @@ const aliases = folderNames.map((folder) => ({
 export default defineConfig({
   plugins: [
     react({
-      jsxImportSource: "@emotion/react",
+      jsxImportSource: '@emotion/react',
     }),
   ],
   resolve: {
